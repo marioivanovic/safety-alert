@@ -1,0 +1,25 @@
+/* ******** FONT FACES ******** */
+
+@font-face {
+    font-family: "LemonMilk-bold";
+    src: url("../assets/webfonts/lemon-milk/LEMONMILK-Bold.otf")
+      format("opentype");
+  }
+  @font-face {
+    font-family: "LemonMilk-medium";
+    src: url("../assets/webfonts/lemon-milk/LEMONMILK-Medium.otf")
+      format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Avenir";
+    src: url("../assets/webfonts/avenir-next/AvenirLTProRoman.otf")
+      format("opentype");
+  }
+  
+  /* ******** BRAND FONTS ******** */
+  
+  $brand-font-primary-bold: "LemonMilk-bold";
+  $brand-font-primary-medium: "LemonMilk-medium";
+  $brand-font-secondary: "Montserrat";
+  $brand-font-tertiary: "Avenir";

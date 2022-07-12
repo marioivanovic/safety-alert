@@ -1,0 +1,60 @@
+@import "../brands-colors.scss";
+
+.primary-color {
+  color: $primary;
+}
+
+.primary-dark-color {
+  color: $primary-dark;
+}
+
+.basic-light-color {
+  color: $basic-light;
+}
+
+.basic-dark-color {
+  color: $basic-dark;
+}
+
+.success-color {
+  color: $success;
+}
+.error-color {
+  color: $error;
+}
+
+.primary-background {
+  background-color: $primary;
+}
+
+.primary-dark-background {
+  background-color: $primary-dark;
+}
+
+.basic-light-background {
+  background-color: $basic-light;
+}
+
+.basic-dark-background {
+  background-color: $basic-dark;
+}
+
+.success-background {
+  background-color: $success;
+}
+
+.error-background {
+  background-color: $error;
+}
+
+.disabled-background {
+  background-color: $disabled;
+}
+
+.success-border {
+  border: 2px solid $primary !important;
+}
+
+.error-border {
+  border: 2px solid $error !important;
+}

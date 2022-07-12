@@ -1,0 +1,49 @@
+@import "../brands-colors.scss";
+@import "../brands_fonts.scss";
+.box {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: $basic-light;
+  font-size: 0.8em;
+  border-radius: 0.4rem;
+  font-family: $brand-font-secondary;
+  font-weight: 600;
+  margin-top: -5px;
+  margin-bottom: 0.8em;
+  text-align: left;
+  line-height: 1.5em;
+  padding: 0 1em;
+  &-info {
+    background-color: $primary;
+    .up-triangle {
+      &-info {
+        border-bottom: 20px solid $primary;
+      }
+    }
+  }
+  &-error {
+    background-color: $error;
+    .up-triangle {
+      &-error {
+        border-bottom: 20px solid $error;
+      }
+    }
+  }
+  .up-triangle {
+    width: 0;
+    height: 0;
+    margin-top: -45px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+  }
+  img {
+    height: 20px;
+    margin-right: 1em;
+  }
+}
+
+.display-none {
+  display: none;
+}
