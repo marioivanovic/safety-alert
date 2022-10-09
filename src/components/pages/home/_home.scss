@@ -1,0 +1,58 @@
+.container-home {
+  height: 100vh;
+  width: 100%;
+  background: blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.container-alerts {
+  height: 200px;
+  width: 100%;
+  background: salmon;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.alert-title {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.container-persons {
+  height: 200px;
+  width: 100%;
+  margin-top: 1em;
+  background: rebeccapurple;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.persons-title {
+  font-size: 2em;
+  font-weight: 200;
+}
+
+.container-stations {
+  height: 200px;
+  width: 100%;
+  margin-top: 1em;
+  background: cyan;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stations-title {
+  font-size: 2em;
+  font-weight: 200;
+}
