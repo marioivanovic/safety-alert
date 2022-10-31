@@ -1,7 +1,38 @@
 .container {
-    background: blue;
+  height: 100vh;
 }
 
-.add-alert{
-    background: red
+.add-alert {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8em;
+}
+
+.form-title {
+  font-size: 2em;
+}
+
+.form-item-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.label {
+  font-size: 1em;
+}
+
+.button {
+  margin-top: 1em;
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1em;
 }

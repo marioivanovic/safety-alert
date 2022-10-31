@@ -1,24 +1,26 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
 
 import NavBar from "./components/navigation/navbar/navBar";
 import Home from "./components/pages/home/home";
-import addAlert from "./components/pages/addAlert/addAlert";
+import AddAlert from './components/pages/addAlert/addAlert';
+import Persons from "./components/pages/persons/persons"
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/add-alert" element={<addAlert />} />
+          <Route exact path="/alert" element={<AddAlert />} />
+          <Route exact path="/people" element={<Persons />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 .container-home {
   height: 100vh;
   width: 100%;
-  background: blue;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,7 +16,6 @@
 .container-alerts {
   height: 200px;
   width: 100%;
-  background: salmon;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -28,25 +27,43 @@
 }
 
 .container-persons {
-  height: 200px;
+  height: auto;
   width: 100%;
   margin-top: 1em;
-  background: rebeccapurple;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+.container_persons {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overview {
+  display: flex;
+}
+
+.text-overview {
+  display: flex;
+  text-align: left;
+  padding: 1em;
+}
+
 .persons-title {
   font-size: 2em;
   font-weight: 200;
+  margin-bottom: 1em;
 }
 
 .container-stations {
-  height: 200px;
+  height: auto;
   width: 100%;
   margin-top: 1em;
-  background: cyan;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -55,4 +72,11 @@
 .stations-title {
   font-size: 2em;
   font-weight: 200;
+}
+
+.container_stations {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { getPersons, getAlerts, getFireStations } from "../../../utils/apiServices"
+import axios from 'axios'
 import './_home.scss'
 
 function Home() {
@@ -8,25 +8,28 @@ function Home() {
     const [firestations, setFireStations] = useState([]);
 
     useEffect(() => {
-        const getPersons = async () => {
+        const getAllPersons = async () => {
             try {
-                let persons = await getPersons();
-                console.log(persons);
-                setPersons(persons);
+                axios.get("http://localhost:8080/api/safetyNetAlets/persons")
+                    .then((res) => {
+                        setPersons(res.data);
+                    })
             }
             catch (e) {
                 console.log(e)
             }
         }
-        getPersons();
+        getAllPersons();
     }, [])
 
     useEffect(() => {
         const getAlerts = async () => {
             try {
-                let alerts = await getAlerts();
-                console.log(alerts);
-                setAlerts(alerts);
+                axios.get("http://localhost:8080/api/safetyNetAlets/alert/list")
+                    .then((res) => {
+                        setAlerts(res.data);
+                    })
+
             }
             catch (e) {
                 console.log(e)
@@ -38,9 +41,11 @@ function Home() {
     useEffect(() => {
         const getFireStations = async () => {
             try {
-                let firestations = await getFireStations();
-                console.log(firestations);
-                setFireStations(firestations);
+                axios.get("http://localhost:8080/api/safetyNetAlets/fireStation")
+                    .then((res) => {
+                        setFireStations(res.data);
+                    })
+                // setFireStations(firestations);
             }
             catch (e) {
                 console.log(e)
@@ -68,45 +73,51 @@ function Home() {
             </div>
 
             <div className="container-persons">
+                {/* <button type="" onClick={test}>test</button> */}
                 <h1 className="persons-title">Personnes</h1>
-                {persons ? persons.map((person, index) => {
-                    return (
-                        <li key={index} className="overview">
+                <div className="container_persons">
+                    {persons ? persons.map((person, index) => {
+                        return (
 
-                            <div className="text-overview">
-                                {person.firstName}
-                            </div>
-                            <div className="text-overview">
-                                {person.lastName}
-                            </div>
-                            <div className="text-overview">
-                                {person.city}
-                            </div>
-                            <div className="text-overview">
-                                {person.email}
-                            </div>
+                            <li key={index} className="overview">
 
-                        </li>
-                    );
-                }) : null}
+                                <div className="text-overview">
+                                    {person.username}
+                                </div>
+                                <div className="text-overview">
+                                    {person.lastName}
+                                </div>
+                                <div className="text-overview">
+                                    {person.phone}
+                                </div>
+                                <div className="text-overview">
+                                    {person.email}
+                                </div>
 
+                            </li>
+
+                        );
+                    }) : null}
+                </div>
             </div>
 
             <div className="container-stations">
                 <h1 className="stations-title">Stations</h1>
-                {firestations ? firestations.map((firestation, index) => {
-                    return (
-                        <li key={index} className="overview">
+                <div className="container_stations">
+                    {firestations ? firestations.map((firestation, index) => {
+                        return (
+                            <li key={index} className="overview">
 
-                            <div className="text-overview">
-                                {firestation.address}
-                            </div>
-                            <div className="text-overview">
-                                {firestation.station}
-                            </div>
-                        </li>
-                    );
-                }) : null}
+                                <div className="text-overview">
+                                    {firestation.address}
+                                </div>
+                                <div className="text-overview">
+                                    {firestation.station}
+                                </div>
+                            </li>
+                        );
+                    }) : null}
+                </div>
             </div>
         </div>
     )
